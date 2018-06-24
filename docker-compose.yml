@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  app:
+    build: app
+    restart: always
+    container_name: flask-web
+    env_file: .env
+    volumes:
+      - ./app:/usr/src/app
+    ports:
+      - 8000:8000
+    command: /usr/local/bin/gunicorn wsgi:app -w 2 -b :8000 --reload
+
+  nginx:
+    build: nginx
+    restart: always
+    container_name: flast-nginx
+    volumes:
+      - ./app/static:/var/www/public/static
+    ports:
+      - 8080:80
+    depends_on:
+      - app
+
+
+networks:
+  default:
+    driver: bridge
