@@ -1,4 +1,4 @@
-#Docker flask
+# Docker flask
 
 The purpose of this project is to simplify the process of configuring Flask using Docker.
 This docker setup contains the minimal configuration of Flask application.
