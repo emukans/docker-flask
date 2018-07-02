@@ -4,7 +4,7 @@ services:
   app:
     build: app
     restart: always
-    container_name: flask-web
+    container_name: flask-app
     env_file: .env
     volumes:
       - ./app:/usr/src/app
