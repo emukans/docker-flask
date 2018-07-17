@@ -1,3 +1,6 @@
 flask == 1.0 # Flask micro web framework
 gunicorn == 19.8 # WSGI HTTP server
 pytest == 3.6 # Testing library
+psycopg2 == 2.7 # a Python adapter for Postgres
+Flask-SQLAlchemy == 2.3 # Flask extension that provides SQLAlchemy support
+Flask-Migrate == 2.2 # extension that supports SQLAlchemy database migrations via Alembic
