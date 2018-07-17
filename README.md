@@ -19,6 +19,31 @@ This docker setup contains the minimal configuration of Flask application.
 
 4. Open [localhost](http://localhost:8000/) `http://localhost:8000/`
 
+## Useful commands
+#### Get into container
+```bash
+docker-compose exec container_name bash
+
+# E.g.
+# To get into container with python and application
+docker-compose exec app bash
+```
+
+#### Database
+
+```bash
+# In app container.
+
+# View list of available commands
+flask db
+
+# Create migration for all new models.
+flask db init
+
+# Apply new migrations
+flask db migrate
+```
+
 ## Project description
 
 Project contain 3 components:
