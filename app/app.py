@@ -10,7 +10,7 @@ app = Flask(__name__, instance_relative_config=True)
 app.config.from_object('config')
 
 # To override default config, create new config file in `app/instance/local_config.py`
-app.config.from_pyfile('local_config.py')
+app.config.from_pyfile('local_config.py', silent=True)
 
 if app.debug:
     app.wsgi_app = DebuggedApplication(app.wsgi_app, evalex=True)
