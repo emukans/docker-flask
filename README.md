@@ -17,7 +17,7 @@ This docker setup contains the minimal configuration of Flask application.
     docker-compose up -d
     ```
 
-4. Open [localhost](http://localhost:8000/) `http://localhost:8000/`
+4. Visit http://localhost:8080/
 
 ## Useful commands
 #### Get into container

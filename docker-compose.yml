@@ -8,9 +8,9 @@ services:
     env_file: .env
     volumes:
       - ./app:/usr/src/app
-    ports:
-      - 8000:8000
     command: /usr/local/bin/gunicorn wsgi:app -w 2 -b :8000 --reload
+    expose:
+      - 8000
 
   nginx:
     build: nginx
